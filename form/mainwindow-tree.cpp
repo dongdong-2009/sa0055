@@ -112,6 +112,7 @@ void MainWindow::processRightButtonClicked(const QModelIndex &index)
 void MainWindow::returnToFirstNode()
 {
     ui->treeView->setCurrentIndex(model->index(0, 0));
+    ui->treeView->expandAll();
 }
 
 void MainWindow::initTreeView()
