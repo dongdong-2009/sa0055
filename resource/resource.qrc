@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>icons/communication.png</file>
+        <file>icons/calculator.png</file>
+        <file>icons/config.png</file>
+        <file>icons/alarm.png</file>
+        <file>icons/formula.png</file>
+        <file>icons/wescon_logo.png</file>
+        <file>icons/save_as.png</file>
+        <file>icons/new_file.png</file>
+        <file>icons/open_file.png</file>
+        <file>icons/save_file.png</file>
+        <file>icons/edit.png</file>
+        <file>icons/export.png</file>
+        <file>icons/import.png</file>
+        <file>icons/exit.png</file>
+        <file>icons/exec.png</file>
+        <file>icons/integral.png</file>
+        <file>icons/D25.png</file>
+        <file>icons/IEC104.png</file>
+        <file>icons/splash.png</file>
+        <file>icons/server.png</file>
+        <file>icons/calcvar.png</file>
+        <file>icons/curve.png</file>
+        <file>icons/data.png</file>
+        <file>icons/device.png</file>
+    </qresource>
+    <qresource prefix="/json">
+        <file>json/tree.json</file>
+    </qresource>
+    <qresource prefix="/sql">
+        <file>sqlite/main.sql</file>
+    </qresource>
+</RCC>

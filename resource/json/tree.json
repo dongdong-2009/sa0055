@@ -1,0 +1,79 @@
+{
+  "comment": {
+    "id":"装置/公式/计算量/告警规则节点必须提供",
+    "text": "名称,除装置/公式/计算量/告警规则节点外必须提供",
+    "icon": "图标",
+    "widget": "StackedWidget的index",
+    "type": "右键菜单添加子节点,删除当前节点",
+    "child": "子节点"
+  },
+  "tree": [
+    {
+      "text": "服务器",
+      "icon": "server.png",
+      "widget": "0"
+    },
+    {
+      "text": "装置列表",
+      "icon": "device.png",
+      "type": "0",
+      "child": []
+    },
+    {
+      "text": "计划曲线",
+      "icon": "curve.png",
+      "widget": "2"
+    },
+    {
+      "text": "计算公式",
+      "icon": "formula.png",
+      "child": [
+        {
+          "text": "公式列表",
+          "icon": "",
+          "type": "1",
+          "child": [
+            {
+              "text": "积分公式",
+              "icon": "integral.png",
+              "widget": "3"
+            }
+          ]
+        },
+        {
+          "text": "计算量",
+          "icon": "calcvar.png",
+          "type": "2",
+          "child": []
+        }
+      ]
+    },
+    {
+      "text": "告警列表",
+      "icon": "alarm.png",
+      "type": "3",
+      "child": []
+    },
+    {
+      "text": "数据记录",
+      "icon": "data.png",
+      "child": [
+        {
+          "text": "历史数据",
+          "icon": "",
+          "widget": "7"
+        },
+        {
+          "text": "追踪数据",
+          "icon": "",
+          "widget": "8"
+        }
+      ]
+    },
+    {
+      "text": "系统参数",
+      "icon": "config.png",
+      "widget": "9"
+    }
+  ]
+}

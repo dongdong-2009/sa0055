@@ -1,0 +1,73 @@
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+#include <QMainWindow>
+
+namespace Ui
+{
+class MainWindow;
+}
+
+class QTreeWidgetItem;
+class QSqlTableModel;
+class DeviceParaForm;
+
+class MainWindow : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    explicit MainWindow(QWidget *parent = 0);
+    ~MainWindow();
+
+    enum WidgetIndex
+    {
+        ServerPara = 0,
+        DevicePara,
+        PlanCurve,
+        IntegralFormula,
+        CommonFormula,
+        CalcVar,
+        AlarmRule,
+        AIDump,
+        AITrace,
+        GlobalPara,
+        MaxWidgetNum
+    };
+
+    void addCalcVarNode(int calcVarId);
+signals:
+    /*for device*/
+    void deviceIdChanged(int deviceId);
+    void formulaIdChanged(int formulaId);
+    void calcVarIdChanged(int calcVarId);
+    void alarmRuleIdChanged(int alarmRuleId);
+
+private:
+    Ui::MainWindow *ui;
+
+    QWidget *stackedWidget[WidgetIndex::MaxWidgetNum];
+
+    void fillTreeWidget();
+    void fillStackWidget();
+
+    void addNewDevice(int deviceId);
+    void deleteDeviceById(int deviceId);
+
+    void fillAllDevice();
+    void fillAllFormula();
+    void fillAllCalcVariable();
+
+    void buildActions();
+    void addDeviceNode(int deviceId);
+    void deleteDeviceNode(int deviceId);
+
+    void addFormulaNode(int formulaId);
+    void addNewFormula(int formulaId, int formulaType);
+    void fillAllAlarmRule();
+    void deleteAlarmRuleNode(int alamrRuleId);
+    void addAlarmRuleNode(int alamrRuleId);
+    void addNewAlarmRule(int alarmRuleId, int alarmCauseId);
+};
+
+#endif // MAINWINDOW_H
